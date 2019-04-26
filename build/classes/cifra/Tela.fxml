@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="600.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cifra.TelaController">
+   <children>
+      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo da Cifra:" />
+            <ComboBox fx:id="boxTipo" onAction="#boxTipo_OnAction" prefWidth="150.0">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="K:">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="txtPos" prefHeight="25.0" prefWidth="34.0">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </TextField>
+            <Text fx:id="txtLabelChave" strokeType="OUTSIDE" strokeWidth="0.0" text="Chave:" visible="false">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Text>
+            <TextField fx:id="txtChave" prefHeight="25.0" prefWidth="264.0" visible="false">
+               <HBox.margin>
+                  <Insets left="2.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <TextArea fx:id="txtMsgCifra" prefHeight="200.0" VBox.vgrow="ALWAYS" />
+      <VBox alignment="TOP_CENTER" prefHeight="49.0" prefWidth="590.0">
+         <children>
+            <Button fx:id="btnCrifrar" mnemonicParsing="false" onAction="#btnCrifrar_OnAction" text="Cifrar">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </VBox>
+      <TextArea fx:id="txtMsgDecifra" prefHeight="200.0" VBox.vgrow="ALWAYS" />
+      <VBox alignment="TOP_CENTER" prefHeight="42.0" prefWidth="590.0">
+         <children>
+            <Button fx:id="btnDecrifrar" mnemonicParsing="false" onAction="#btnDecrifrar_OnAction" text="Decifrar">
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Separator prefWidth="200.0" />
+            <Button fx:id="btnLimpar" mnemonicParsing="false" onAction="#btnLimpar_OnAction" style="-fx-background-color: orange;" text="Limpar">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets top="2.0" />
+         </padding>
+      </VBox>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</VBox>
